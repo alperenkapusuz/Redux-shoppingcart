@@ -50,8 +50,7 @@ class CartSummary extends Component {
   render() {
     return (
       <div>
-        {/* {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmpty()} */
-        this.renderSummary()}
+        {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmpty()}
       </div>
     );
   }
