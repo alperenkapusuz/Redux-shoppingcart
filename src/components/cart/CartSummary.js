@@ -11,7 +11,7 @@ import {
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../../redux/actions/cartActions";
-//import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import alertify from "alertifyjs"
 
 class CartSummary extends Component {
@@ -42,7 +42,7 @@ class CartSummary extends Component {
           ))}
 
           <DropdownItem divider />
-          <DropdownItem>Sepete git</DropdownItem>
+          <DropdownItem><Link to={"/cart"}>Sepete git</Link></DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );
@@ -50,7 +50,8 @@ class CartSummary extends Component {
   render() {
     return (
       <div>
-        {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmpty()}
+        {/* {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmpty()} */
+        this.renderSummary()}
       </div>
     );
   }
@@ -71,5 +72,5 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CartSummary)
+)(CartSummary);
 
