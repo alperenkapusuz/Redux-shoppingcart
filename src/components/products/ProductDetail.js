@@ -52,7 +52,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
       />
 
       <button type="submit" className="btn btn-success">
-        Save
+        Kaydet
       </button>
     </form>
   );
