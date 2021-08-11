@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -29,14 +29,13 @@ export default class Navi extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand>Shopping Cart</NavbarBrand>
+          <NavbarBrand><Link to="/">Shopping Cart</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink>
-                  {/* <Link to="/saveproduct">Ürün ekle</Link> */}
-                  Ürün Ekle
+                  <Link to="/saveproduct">Ürün ekle</Link>
                 </NavLink>
               </NavItem>
               <CartSummary />
